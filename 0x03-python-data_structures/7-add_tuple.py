@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+def add_tuple(tuple_a=(), tuple_b=()):
+        tuple_a += (0, 0)
+        tuple_b += (0, 0)
+        one = tuple_a[0] + tuple_b[0]
+        two = tuple_a[1] + tuple_b[1]
+        tt = one, two
+        return tt
