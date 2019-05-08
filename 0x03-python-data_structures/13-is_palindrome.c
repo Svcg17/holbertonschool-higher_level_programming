@@ -35,17 +35,24 @@ int is_palindrome(listint_t **head)
 	listint_t *current = *head;
 	listint_t *mid = NULL;
 
+	if (head == NULL)
+		return (0);
 	if (*head == NULL)
 		return (1);
-	while (f != NULL && f->next != NULL)
+	while (f != NULL && f->next != NULL && f->next->next)
 	{
 		s = s->next;
 		f = f->next->next;
-		mid = reverse_listint(&s);
-		if (current->n == mid->n)
-			return (1);
 	}
-return (0);
+	mid = reverse_listint(&s);
+	while (current != NULL && mid != NULL)
+	{
+		if (current->n != mid->n)
+			return (0);
+		current = current->next;
+		mid = mid->next;
+	}
+	return (1);
 }
 
 
