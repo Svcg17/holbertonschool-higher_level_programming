@@ -11,6 +11,10 @@ def text_indentation(text):
             the changed text
 
     """
+    if text == "\n":
+        print()
+    if text is None:
+        raise TypeError("text must be a string")
     if type(text) != str:
         raise TypeError("text must be a string")
     delims = ".?:"
