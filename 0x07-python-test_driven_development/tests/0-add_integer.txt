@@ -1,0 +1,59 @@
+The ``0-add_integer`` module
+=============================
+Using ``add_integer``
+--------------------
+
+First import ``add_integer`` from the ``0-add_integer`` module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Normal output:
+
+    >>> add_integer(-2, 2)
+    0
+    >>> add_integer(3.0, 3.0)
+    6
+    >>> add_integer(-2, -2)
+    -4
+    >>> add_integer(100.3, -2)
+    98
+    >>> add_integer(2)
+    100
+
+Errors:
+
+    >>> add_integer(4, "school")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    >>> add_integer(, 4)
+    Traceback (most recent call last):
+    ...
+    SyntaxError: invalid syntax
+   
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    infinity float
+    >>> add_integer(34, a)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'a' is not defined
+
+    >>> add_integer("hehe", "haha")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer('s')
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
