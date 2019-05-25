@@ -1,5 +1,16 @@
+#!/usr/bin/python3
+""" add_integer module """
 def add_integer(a, b=98):
-    """ Function that adds two integers """
+    """ Function that adds two integers.
+
+    Args:
+        a (int): first number
+        b (int): second number
+
+    Returns:
+        a + b
+
+    """
     if a:
         if type(a) == float:
             a = int(a)
