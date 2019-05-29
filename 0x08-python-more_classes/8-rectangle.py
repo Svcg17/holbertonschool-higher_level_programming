@@ -82,7 +82,7 @@ class Rectangle:
             return temp
         else:
             temp = ("Rectangle(" + str(self.__width))
-            temp += "," + str(self.__height) + ")"
+            temp += ", " + str(self.__height) + ")"
             return temp
 
     def __del__(self):
