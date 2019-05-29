@@ -76,13 +76,12 @@ class Rectangle:
         return rec.strip('\n')
 
     def __repr__(self):
-        """ string representation of rectangle """
-        temp = ""
+        a = self.__width
+        b = self.__height
         if self.__width == 0 or self.__height == 0:
             return temp
         else:
-            temp = ("Rectangle(" + str(self.__width))
-            temp += ", " + str(self.__height) + ")"
+            temp = ("Rectangle(" + str(a) + ", " + str(b) + ")")
             return temp
 
     def __del__(self):
@@ -97,7 +96,9 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1.area() > rect_2.area():
+        if rect_1.area() == rect_2.area():
+            return rect_1
+        elif rect_1.area() > rect_2.area():
             return rect_1
         else:
             return rect_2
