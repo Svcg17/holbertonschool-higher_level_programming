@@ -65,8 +65,6 @@ class Rectangle:
     def __str__(self):
         """ print rectangle """
         rec = ""
-        if self.__width == 0 or self.__height == 0:
-            return temp
         for i in range(0, self.__height):
             for j in range(0, self.__width):
                 rec += '#'
@@ -76,6 +74,10 @@ class Rectangle:
     def __repr__(self):
         """ string representation of the rectangle """
         temp = ""
-        temp = ("Rectangle(" + str(self.__width))
-        temp += "," + str(self.__height) + ")"
-        return temp
+        a = self.__width
+        b = self.__height
+        if self.__width == 0 or self.__height == 0:
+            return temp
+        else:
+            temp = ("Rectangle(" + str(a) + "," + str(b) + ")")
+            return temp
