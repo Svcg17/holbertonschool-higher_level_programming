@@ -79,5 +79,5 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return temp
         else:
-            temp = ("Rectangle(" + str(a) + "," + str(b) + ")")
+            temp = ("Rectangle(" + str(a) + ", " + str(b) + ")")
             return temp
