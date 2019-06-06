@@ -38,6 +38,8 @@ class Square(Rectangle):
         """subclass constructor"""
         self.__size = size
         BaseGeometry.integer_validator(self, "size", size)
+        super().__init__(size, size)
+
 
     def area(self):
         """ returns area of square"""
