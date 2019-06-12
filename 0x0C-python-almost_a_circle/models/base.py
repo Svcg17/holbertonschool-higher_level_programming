@@ -59,13 +59,14 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set"""
-        if cls.__name__ is not "Square" and cls.__name__ is not "Rectangle":
-            pass
-        else:
+        if cls.__name__ == "Rectangle":
             dummy = cls(1, 2)
             dummy.update(**dictionary)
             return dummy
-
+        if cls.__name__ == "Square":
+            dummy2 = cls(2)
+            dummy2.update(**dictionary)
+            return dummy2
 
     @classmethod
     def load_from_file(cls):
