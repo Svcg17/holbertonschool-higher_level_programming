@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+""" The base module
+"""
 import json
 from os import path
-""" The base module """
 
 
 class Base:
@@ -23,7 +24,7 @@ class Base:
             self.id = id
         else:
             Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+            self.id = self.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
