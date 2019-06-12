@@ -16,7 +16,7 @@ class Rectangle(Base):
             id: Base class' id attribute
 
         """
-        Base.__init__(self, id)
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -96,31 +96,17 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
-        if not args:
+        if args:
+            attributes = ["id", "width", "height", "x", "y"]
+            for i, j in enumerate(args):
+                if i < len(attributes):
+                    setattr(self, attributes[i], j)
+        else:
             for key, value in kwargs.items():
-                setattr(self, key, value)
-
-        if len(args) == 1:
-            setattr(self, 'id', args[0])
-        elif len(args) == 2:
-            setattr(self, 'id', args[0])
-            setattr(self, 'width', args[1])
-        elif len(args) == 3:
-            setattr(self, 'id', args[0])
-            setattr(self, 'width', args[1])
-            setattr(self, 'height', args[2])
-        elif len(args) == 4:
-            setattr(self, 'id', args[0])
-            setattr(self, 'width', args[1])
-            setattr(self, 'height', args[2])
-            setattr(self, 'x', args[3])
-        elif len(args) == 5:
-            setattr(self, 'id', args[0])
-            setattr(self, 'width', args[1])
-            setattr(self, 'height', args[2])
-            setattr(self, 'x', args[3])
-            setattr(self, 'y', args[4])
+                if hasattr(self, key):
+                    setattr(self, key, value)
 
     def to_dictionary(self):
         """Returns the dictionary representation of a Rectangle"""
-        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'height':
+                self.height, 'width': self.width}
