@@ -1,8 +1,8 @@
-"""Unittest for Base class"""
-
-
+"""Unittest for Base class
+"""
 import unittest
 from models.base import Base
+
 
 class Test_base(unittest.TestCase):
     """ A Test_base class"""
