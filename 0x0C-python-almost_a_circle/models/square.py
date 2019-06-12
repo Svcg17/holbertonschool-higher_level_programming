@@ -8,7 +8,6 @@ class Square(Rectangle):
     """
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
-        self.size = size
 
     def __str__(self):
         """returns a string"""
@@ -18,17 +17,11 @@ class Square(Rectangle):
     @property
     def size(self):
         """size attribute getter method"""
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, size):
-        if type(size) is not int:
-            raise TypeError("{} must be an integer".format("width"))
-        if size <= 0:
-            raise ValueError("{} must be > 0".format("width"))
-        self.__width = size
-        self.__height = size
-        self.__size = size
+        self.width = size
 
     def update(self, *args, **kwargs):
         """"assigns attributes to arguments"""
