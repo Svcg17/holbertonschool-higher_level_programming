@@ -11,10 +11,9 @@ class Square(Rectangle):
         self.size = size
 
     def __str__(self):
-        # PASS SIZE OR WIDTH?
         """returns a string"""
         return ("[Square] ({}) {}/{} - {}".format(self.id,
-                self.x, self.y, self.__size))
+                self.x, self.y, self.width))
 
     @property
     def size(self):
@@ -33,25 +32,17 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """"assigns attributes to arguments"""
-        if not args:
+        if args:
+            attributes = ["id", "size", "x", "y"]
+            for i, j in enumerate(args):
+                if i < len(attributes):
+                    setattr(self, attributes[i], j)
+        else:
             for key, value in kwargs.items():
-                setattr(self, key, value)
-
-        if len(args) == 1:
-            setattr(self, 'id', args[0])
-        elif len(args) == 2:
-            setattr(self, 'id', args[0])
-            setattr(self, 'size', args[1])
-        elif len(args) == 3:
-            setattr(self, 'id', args[0])
-            setattr(self, 'size', args[1])
-            setattr(self, 'x', args[2])
-        elif len(args) == 4:
-            setattr(self, 'id', args[0])
-            setattr(self, 'size', args[1])
-            setattr(self, 'x', args[2])
-            setattr(self, 'y', args[3])
+                if hasattr(self, key):
+                    setattr(self, key, value)
 
     def to_dictionary(self):
         """Returns the dictionary representation of a square"""
-        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'height':
+                self.height, 'width': self.width}
