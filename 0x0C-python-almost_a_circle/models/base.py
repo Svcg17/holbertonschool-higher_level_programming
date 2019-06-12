@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import json
+from os import path
 """ The base module """
 
 
@@ -52,27 +53,22 @@ class Base:
         if json_string is None:
             return []
         else:
-          #  if type(json_string) is not str:
-           #     raise TypeError("json_string must be a list")
             return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set"""
-        dummy = cls(1, 2, 3, 3)
+        dummy = cls(1, 2)
         dummy.update(**dictionary)
         return dummy
 
     @classmethod
     def load_from_file(cls):
         """returns a list of instances"""
-        lista=[]
-        if cls.__name__ + ".json":
+        lista = []
+        if path.isfile(cls.__name__ + ".json"):
             with open(cls.__name__ + ".json") as f:
                 hey = cls.from_json_string(f.read())
                 for i in hey:
-                    print (i)
                     lista.append(cls.create(**i))
-                return lista
-        else:
-            return []
+        return lista
