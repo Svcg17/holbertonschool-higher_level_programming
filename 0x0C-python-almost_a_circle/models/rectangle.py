@@ -3,7 +3,7 @@
 from models.base import Base
 
 
-class Rectangle:
+class Rectangle(Base):
     """ A Rectangle class inherited from Base class
     """
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -99,6 +99,7 @@ class Rectangle:
         if not args:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
         if len(args) == 1:
             setattr(self, 'id', args[0])
         elif len(args) == 2:
