@@ -2,7 +2,6 @@
 """
 
 
-import json
 import unittest
 import sys
 from io import StringIO
@@ -21,6 +20,7 @@ class Test_rectangle(unittest.TestCase):
     def test_assignment(self):
         """Creating instance with values"""
         r1 = Rectangle(10, 2)
+        self.assertTrue(type(r1), Rectangle)
 
     def test_oneparam(self):
         """Passing one arg to instance declaration"""
@@ -231,6 +231,7 @@ class Test_rectangle(unittest.TestCase):
             r1_dic = r1.to_dictionary(33)
             r1_dic = r1.to_dictionary(None)
             r1_dic = r1.to_dictionary("sdf")
+
 
 if __name__ == "__main__":
     unittest.main()

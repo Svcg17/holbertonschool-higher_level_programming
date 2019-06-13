@@ -20,6 +20,7 @@ class Test_Square(unittest.TestCase):
     def test_assignment(self):
         """Creating instance with values"""
         r1 = Square(10, 2, 7, 8)
+        self.assertTrue(type(r1), Square)
 
     def test_oneparam(self):
         """Passing one arg to instance declaration"""
@@ -89,6 +90,7 @@ class Test_Square(unittest.TestCase):
         """Testing area method"""
         r1 = Square(2, 2)
         self.assertEqual(r1.area(), 4)
+        self.assertTrue(r1, Square)
 
     def test_areawithparam(self):
         """Test params being passed to area function"""
@@ -224,6 +226,7 @@ class Test_Square(unittest.TestCase):
         print(r2)
         sys.stdout = sys.__stdout__
         self.assertEqual(outvarr.getvalue(), "[Square] (9) 2/1 - 10\n")
+        self.assertTrue(r1_dic, dict)
 
     def test_to_dictionary_with_params(self):
         """Testing passing a parameter to t_dictionary metthod"""
