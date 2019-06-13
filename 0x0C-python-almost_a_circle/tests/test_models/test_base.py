@@ -1,5 +1,6 @@
 import unittest
 import sys
+import os
 import json
 from io import StringIO
 from models.base import Base
@@ -111,6 +112,17 @@ class Test_base(unittest.TestCase):
                 [{"y": 2, "x": 7, "id": 8, "size": 10}, {
                     "y": 3, "x": 4, "id": 4, "size": 2}])))
 
+    def test_ssave_to_file(self):
+        """Testing save_to_file none"""
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as files:
+            self.assertEqual(files.read(), "[]")
+
+    def test_ssave_to_file(self):
+        """Testing save_to_file none"""
+        Square.save_to_file(None)
+        with open("Square.json", "r") as files:
+            self.assertEqual(files.read(), "[]")
 
     def test_empty_list_to_json(self):
         """Testing for an empty list as parameter"""
@@ -127,6 +139,12 @@ class Test_base(unittest.TestCase):
         """Testing for no parameters in save_to_file"""
         Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as files:
+            self.assertEqual(files.read(), "[]")
+
+    def test_to_file_emptylist(self):
+        """Ttesting forr empty list as param"""
+        Square.save_to_file([])
+        with open("Square.json", "r") as files:
             self.assertEqual(files.read(), "[]")
 
     def test_from_json_string(self):

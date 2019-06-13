@@ -12,7 +12,7 @@ from models.rectangle import Rectangle
 class Test_rectangle(unittest.TestCase):
     """A Test_rectangle class
     """
-    def resetnb(self):
+    def set_up(self):
         """Resets __nb_objects"""
         Base._Base__nb_objects = 0
 
@@ -36,6 +36,13 @@ class Test_rectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r1 = Rectangle("sdf")
 
+    def test_stringmoerparam(self):
+        """Passing string in different position"""
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, "2")
+            r1 = Rectangle(1, 2, "3")
+            r1 = Rectangle(1, 2, 3, "4")
+
     def test_noparam(self):
         """Passing no arguments"""
         with self.assertRaises(TypeError):
@@ -55,10 +62,14 @@ class Test_rectangle(unittest.TestCase):
         """Passing only negative numbers"""
         with self.assertRaises(ValueError):
             r1 = Rectangle(-1, -3, -2, -2, -3)
+            r1 = Rectangle(1, 2, 3, -4)
 
     def test_neganndpos(self):
         """Passing both negative and positve integers"""
         with self.assertRaises(ValueError):
+            r2 = Rectangle(-1, 2)
+            r3 = Rectangle(1, -2)
+            r4 = Rectangle(1, 0)
             r1 = Rectangle(2, -3, 23, -2, -3)
 
     def test_zero(self):

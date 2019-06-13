@@ -35,6 +35,8 @@ class Test_Square(unittest.TestCase):
         """Passing str to the instance"""
         with self.assertRaises(TypeError):
             r1 = Square("sdf")
+            r2 = Square(1, "2")
+            r3 = Square(1, 2, "3")
 
     def test_noparam(self):
         """Passing no arguments"""
@@ -55,6 +57,8 @@ class Test_Square(unittest.TestCase):
         """Passing only negative numbers"""
         with self.assertRaises(ValueError):
             r1 = Square(-1, -3, -2, -2)
+            r1 = Square(-1)
+            r2 = Square(1, 2, -3)
 
     def test_neganndpos(self):
         """Passing both negative and positve integers"""
