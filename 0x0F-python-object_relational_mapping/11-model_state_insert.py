@@ -25,5 +25,5 @@ if __name__ == '__main__':
     for state in r:
         if state.name == "Louisiana":
             print("{}".format(state.id))
-        break
+            break
     session.close()
