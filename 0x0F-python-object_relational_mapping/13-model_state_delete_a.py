@@ -5,6 +5,7 @@ a from the database hbtn_0e_6_usa
 """
 if __name__ == '__main__':
     from model_state import Base, State
+    from sys import argv
     import sqlalchemy
     from sqlalchemy.orm import sessionmaker
     from sqlalchemy import create_engine
