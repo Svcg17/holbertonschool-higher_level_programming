@@ -18,7 +18,7 @@ def find_peak(list_of_integers):
 
     while True:
         mid_e = mid_e // 2
-        if (mid_e < size - 1 and
+        if (mid < size - 1 and
                 list_of_integers[mid] < list_of_integers[mid + 1]):
             if mid_e // 2 == 0:
                 mid_e = 2
