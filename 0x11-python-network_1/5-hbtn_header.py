@@ -7,5 +7,4 @@ if __name__ == "__main__":
     import requests
     from sys import argv
     r = requests.get(argv[1])
-    dic = (r.headers)
-    print(dic['x-request-id'])
+    print(r.headers.get('x-request-id'))
