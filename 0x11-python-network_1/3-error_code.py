@@ -7,9 +7,9 @@ if __name__ == "__main__":
     import urllib.request
     from sys import argv
 
-try:
-    with urllib.request.urlopen(argv[1]) as r:
-        readed = r.read().decode('utf-8')
-        print(readed)
-except urllib.error.HTTPError as error:
-    print("Error code: {}".format(error.code))
+    try:
+        with urllib.request.urlopen(argv[1]) as r:
+            readed = r.read().decode('utf-8')
+            print(readed)
+    except urllib.error.HTTPError as error:
+        print("Error code: {}".format(error.code))
