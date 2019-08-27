@@ -14,9 +14,9 @@ if __name__ == "__main__":
 
     response = requests.post(url='http://0.0.0.0:5000/search_user', data=dic)
     d = response.json()
-    if d == {}:
-        print('No result')
-    elif type(d['name']) != str:
+    if response.headers.get('content-type') != 'application/json':
         print('Not a valid JSON')
+    elif d == {}:
+        print('No result')
     else:
         print('[{}] {}'.format(d['id'], d['name']))
