@@ -8,5 +8,4 @@ if __name__ == "__main__":
     from sys import argv
 
     re = requests.post(url=argv[1], data={'email': argv[2]})
-    t = re.text
-    print(t)
+    print(re.text)
