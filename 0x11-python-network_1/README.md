@@ -22,11 +22,6 @@ What is localhost?
 1. A hostname that means this IP
 2. A hostname that means this computer
 3. An IP attached to a computer
-Repo:
-
-- GitHub repository: holberton-system_engineering-devops
-- Directory: 0x08-networking_basics_2
-- File: 0-localhost
 
 ### [1. All IPs](./1-wildcard)
 What is 0.0.0.0?
