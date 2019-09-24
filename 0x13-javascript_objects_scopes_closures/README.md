@@ -79,7 +79,7 @@ Rectangle { width: 2, height: undefined }
 undefined
 guillaume@ubuntu:~/0x13$ 
 ```
-### [2. Rectangle #2] (2-rectangle.js)
+### [2. Rectangle #2](2-rectangle.js)
 * Write a class Rectangle that defines a rectangle:
 * You must use the class notation for defining your class
 * The constructor must take 2 arguments w and h
@@ -126,7 +126,7 @@ undefined
 undefined
 guillaume@ubuntu:~/0x13$ 
 ```
-### [3. Rectangle #3] (3-rectangle.js)
+### [3. Rectangle #3](3-rectangle.js)
 **  Write a class Rectangle that defines a rectangle:
 
 * You must use the class notation for defining your class
@@ -157,7 +157,7 @@ XXXXXXXXXX
 XXXXXXXXXX
 guillaume@ubuntu:~/0x13$
 ```
-### [4. Rectangle #4] (./4-rectangle.js)
+### [4. Rectangle #4](./4-rectangle.js)
 * Write a class Rectangle that defines a rectangle:
 
 * You must use the class notation for defining your class
@@ -204,7 +204,7 @@ XXXXXX
 XXXXXX
 guillaume@ubuntu:~/0x13$ 
 ```
-### [5. Square #0] (5-square.js)
+### [5. Square #0](5-square.js)
 * Write a class Square that defines a square and inherits from Rectangle of 4-rectangle.js:
 
 * You must use the class notation for defining your class and extends
@@ -235,7 +235,7 @@ XXXXXXXX
 XXXXXXXX
 guillaume@ubuntu:~/0x13$ 
 ```
-### [6. Square #1] (6-square)
+### [6. Square #1](6-square)
 * Write a class Square that defines a square and inherits from Square of 5-square.js:
 
 * You must use the class notation for defining your class and extends
@@ -262,7 +262,7 @@ CCCC
 CCCC
 guillaume@ubuntu:~/0x13$
 ```
-### [7. Occurrences ] (./7-occurrences.js)
+### [7. Occurrences ](./7-occurrences.js)
 * Write a function that returns the number of occurrences in a list:
 
 * Prototype: exports.nbOccurences = function (list, searchElement)
@@ -281,7 +281,7 @@ guillaume@ubuntu:~/0x13$ ./7-main.js
 2
 guillaume@ubuntu:~/0x13$
 ```
-### [8. Esrever ] (./8-esrever.js)
+### [8. Esrever ](./8-esrever.js)
 * Write a function that returns the reversed version of a list:
 
 * Prototype: exports.esrever = function (list)
@@ -300,11 +300,14 @@ guillaume@ubuntu:~/0x13$ ./8-main.js
 guillaume@ubuntu:~/0x13$  
 
 ```
-### [9. Log me] (./9-logme.js)
+
+### [9. Log me](./9-logme.js)
 * Write a function that prints the number of arguments already printed and the new argument value. (see example below)
 
 * Prototype: exports.logMe = function (item)
 * Output format: <number arguments already printed>: <current argument value>
+
+
 ```
 guillaume@ubuntu:~/0x13$ cat 9-main.js
 #!/usr/bin/node
@@ -320,7 +323,7 @@ guillaume@ubuntu:~/0x13$ ./9-main.js
 2: School
 guillaume@ubuntu:~/0x13$
 ```
-### [10. Number conversion] (./10-converter.js)
+### [10. Number conversion](./10-converter.js)
 * Write a function that converts a number from base 10 to another base passed as argument:
 * Prototype: exports.converter = function (base)
 * You are not allowed to import any file
@@ -352,7 +355,8 @@ c
 59
 guillaume@ubuntu:~/0x13$  
 ```
-### [11. Factor index] (./100-map.js)
+
+### [11. Factor index](./100-map.js)
 * Write a script that imports an array and computes a new array.
 
 * Your script must import list from the file 100-data.js
@@ -369,7 +373,7 @@ guillaume@ubuntu:~/0x13$ ./100-map.js
 guillaume@ubuntu:~/0x13$
 ```
 
-### [12. Sorted occurences] (./101-sorted.js)
+### [12. Sorted occurences](./101-sorted.js)
 * Write a script that imports a dictionary of occurrences by user id and computes a dictionary of user ids by occurrence.
 
 * Your script must import dict from the file 101-data.js
@@ -392,7 +396,8 @@ guillaume@ubuntu:~/0x13$ ./101-sorted.js
 { '1': [ '89', '91', '93' ], '2': [ '90', '94' ], '3': [ '92' ] }
 guillaume@ubuntu:~/0x13$ 
 ```
-### [13. Concat files] (./102-concat.js)
+
+### [13. Concat files](./102-concat.js)
 * Write a script that concats 2 files.
 
 * The first argument is the file path of the first source file
