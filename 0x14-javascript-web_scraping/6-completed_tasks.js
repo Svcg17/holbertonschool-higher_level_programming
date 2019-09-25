@@ -8,13 +8,13 @@ request(url, function (err, request, body) {
     console.log(err);
   } else {
     for (const i of JSON.parse(body)) {
-      dict[i.userId] = counter;
-      counter = 0;
-      for (const j of JSON.parse(body)) {
-        if (j.userId === i.userId) {
-          if (j.completed === true) {
-            counter++;
-          }
+      if (i.completed === true) {
+        if (dict[i.userId]) {
+          counter++;
+          dict[i.userId] = counter;
+        } else {
+          counter = 1;
+          dict[i.userId] = counter;
         }
       }
     }
