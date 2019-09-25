@@ -8,7 +8,7 @@ request(url, function (err, request, body) {
   } else {
     for (const movie of JSON.parse(body).results) {
       for (const character of movie.characters) {
-        if (character === 'https://swapi.co/api/people/18/') {
+        if (character.includes('18')) {
           counter++;
         }
       }
