@@ -1,5 +1,5 @@
-# High Level Programming
-### holbertonschool-higher_level_programming
+# High Level Programming :computer:
+### holbertonschool-higher_level_programming 
 
 # Description
 Holberton School's project based higher level programming curriculum. 
